@@ -13,16 +13,17 @@ set backspace=indent,eol,start
 set nobackup
 set noswapfile
 set viminfo=
-syntax on
+syntax enable
+autocmd ColorScheme * highlight Normal ctermbg=none
+autocmd ColorScheme * highlight LineNr ctermbg=none
+colorscheme material-theme
 inoremap { {}<LEFT>
 inoremap [ []<LEFT>
 inoremap ( ()<LEFT>
-inoremap " ""<LEFT>
-inoremap ' ''<LEFT>
-imap <C-p> <Up>
-imap <C-n> <Down>
-imap <C-b> <Left>
-imap <C-f> <Right>
+imap <C-k> <Up>
+imap <C-j> <Down>
+imap <C-h> <Left>
+imap <C-l> <Right>
 
 " 隣接した{}で改行したらインデント
 function! IndentBraces()

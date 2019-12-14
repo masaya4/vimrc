@@ -1,6 +1,7 @@
 set encoding=utf-8
 set title
-set clipboard+=unnamed
+" ヤンクでクリップボードにコピーする
+set clipboard+=unnamed,autoselect
 set number
 set expandtab
 set tabstop=4
@@ -12,17 +13,19 @@ set backspace=indent,eol,start
 set nobackup
 set noswapfile
 set viminfo=
+" 構文ハイライトの表示
 syntax enable
+" vim背景をターミナルと同じにする
 autocmd ColorScheme * highlight Normal ctermbg=none
 autocmd ColorScheme * highlight LineNr ctermbg=none
 colorscheme material-theme
 inoremap { {}<LEFT>
 inoremap [ []<LEFT>
 inoremap ( ()<LEFT>
-imap <C-k> <Up>
-imap <C-j> <Down>
-imap <C-h> <Left>
-imap <C-l> <Right>
+inoremap <c-k> <Up>
+inoremap <c-j> <Down>
+inoremap <c-h> <Left>
+inoremap <c-l> <Right>
 
 " 隣接した{}で改行したらインデント
 function! IndentBraces()

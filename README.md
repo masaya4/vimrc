@@ -1,4 +1,3 @@
-### vimrcの設定パス
-ターミナルで`$vim --version`
-
+### vimrc場所
+vim上で`:echo $MYVIMRC`
 
